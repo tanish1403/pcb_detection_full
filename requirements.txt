@@ -40,4 +40,4 @@ thop  # FLOPs computation
 # roboflow
 
 
-stramlit
+streamlit
