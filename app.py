@@ -24,7 +24,7 @@ def run_image_processing(file):
     try:
         python_executable = sys.executable
         #add iamge size
-        subprocess.run([python_executable , detectorScript, '--source', filepath, '--weights', weights, '--conf', '0.25', '--name', 'detect', '--exist-ok', '--project', cacheAbsolutePath, "--no-trace"])
+        subprocess.run([python_executable , detectorScript, '--source', filepath, '--weights', weights, '--conf', '0.25', '--name', 'detect', '--exist-ok', '--project', cacheAbsolutePath, "--no-trace", "--save-txt"])
     
         # subprocess.run([python_executable, detectorScript, "--weights", weights, "--source", filepath, "--img-size", "416", "--save-txt", "--save-conf", "--save-crop", "--nosave", "--exist-ok", "--project", cacheAbsolutePath, "--name", "detect"])
     except subprocess.CalledProcessError as e:
